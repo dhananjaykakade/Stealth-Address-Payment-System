@@ -4579,6 +4579,8 @@ packages:
       }
     cpu: [x64]
     os: [win32]
+  '@scopelift/stealth-address-sdk@1.0.0-beta.2':
+    resolution: {integrity: sha512-2nu33+xE5hWG+Hvd5CUnOiEaKxRYm44l9aLDGKCk1VSF0yVcdWbVN4JYj2dTftc2rDTuiKuCxlned5rpk2pMlw==}
 
   '@scure/base@1.1.5':
     resolution:
@@ -8601,6 +8603,11 @@ packages:
       {
         integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==,
       }
+
+  graphql-request@7.4.0:
+    resolution: {integrity: sha512-xfr+zFb/QYbs4l4ty0dltqiXIp07U6sl+tOKAb0t50/EnQek6CVVBLjETXi+FghElytvgaAWtIOt3EV7zLzIAQ==}
+    peerDependencies:
+      graphql: 14 - 16
 
   graphql@16.13.1:
     resolution:
@@ -17784,6 +17791,17 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.59.0':
     optional: true
+  '@scopelift/stealth-address-sdk@1.0.0-beta.2(bufferutil@4.1.0)(graphql@16.13.1)(typescript@5.9.3)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@noble/secp256k1': 2.0.0
+      graphql-request: 7.4.0(graphql@16.13.1)
+      viem: 2.47.1(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)
+    transitivePeerDependencies:
+      - bufferutil
+      - graphql
+      - typescript
+      - utf-8-validate
+      - zod
 
   '@scure/base@1.1.5': {}
 
@@ -20947,6 +20965,11 @@ snapshots:
       - graphql
 
   graceful-fs@4.2.11: {}
+
+  graphql-request@7.4.0(graphql@16.13.1):
+    dependencies:
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.13.1)
+      graphql: 16.13.1
 
   graphql@16.13.1: {}
 
