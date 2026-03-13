@@ -1,9 +1,21 @@
+'use client';
+
 import { QRCodeSVG } from 'qrcode.react';
+import { useState } from 'react';
 
 const publicViewKey = '02a7f4c2e90b91da1293d8f60df8b56b8c72a1185f5ae92e61bdf13f7e2f4790ab';
 const publicSpendKey = '037dbe4b7627432d6c4b4f56ae9ec73f90c8cb15cf9cc5cb6b5d0d6ff13b3a1a9e';
 
 export default function ReceivePage(): React.JSX.Element {
+  const [copied, setCopied] = useState(false);
+
+  const onCopy = async () => {
+    const payload = `${publicViewKey}:${publicSpendKey}`;
+    await navigator.clipboard.writeText(payload);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  };
+
   return (
     <div className="grid gap-6 lg:grid-cols-[1.05fr,0.95fr]">
       <div className="space-y-6">
@@ -21,7 +33,7 @@ export default function ReceivePage(): React.JSX.Element {
             <label className="text-xs font-medium text-white/40 uppercase tracking-wide">
               Public View Key (A)
             </label>
-            <p className="mt-2 break-all rounded-2xl border border-white/10 bg-black/20 p-4 font-mono text-sm text-cyan-100">
+            <p className="mt-2 break-all rounded-2xl border border-white/10 bg-black/20 p-4 font-mono text-sm text-fuchsia-100">
               {publicViewKey}
             </p>
           </div>
@@ -29,17 +41,19 @@ export default function ReceivePage(): React.JSX.Element {
             <label className="text-xs font-medium text-white/40 uppercase tracking-wide">
               Public Spend Key (B)
             </label>
-            <p className="mt-2 break-all rounded-2xl border border-white/10 bg-black/20 p-4 font-mono text-sm text-violet-100">
+            <p className="mt-2 break-all rounded-2xl border border-white/10 bg-black/20 p-4 font-mono text-sm text-amber-100">
               {publicSpendKey}
             </p>
           </div>
 
-          <button className="button-premium w-full">Copy Stealth Address</button>
+          <button type="button" onClick={onCopy} className="button-premium w-full">
+            {copied ? 'Copied' : 'Copy Stealth Address'}
+          </button>
         </div>
       </div>
 
       <div className="app-shell-panel rounded-[1.75rem] p-6">
-        <div className="text-sm font-medium uppercase tracking-[0.22em] text-cyan-100/70">
+        <div className="text-sm font-medium uppercase tracking-[0.22em] text-fuchsia-100/80">
           Shareable stealth card
         </div>
         <div className="mt-5 flex flex-col items-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 text-center">
@@ -54,7 +68,7 @@ export default function ReceivePage(): React.JSX.Element {
             <div className="rounded-2xl border border-emerald-400/12 bg-emerald-400/8 px-4 py-3 text-sm text-emerald-100/80">
               Unlinkable outputs by default
             </div>
-            <div className="rounded-2xl border border-cyan-400/12 bg-cyan-400/8 px-4 py-3 text-sm text-cyan-100/80">
+            <div className="rounded-2xl border border-fuchsia-400/15 bg-fuchsia-400/10 px-4 py-3 text-sm text-fuchsia-100/85">
               Receiver identity never appears as a static address
             </div>
           </div>

@@ -124,16 +124,16 @@ export default function HomePage(): React.JSX.Element {
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/dashboard"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-violet-500 px-6 py-3.5 text-sm font-medium text-slate-950 shadow-[0_20px_60px_rgba(56,189,248,0.35)] transition hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-fuchsia-400 via-rose-300 to-amber-200 px-6 py-3.5 text-sm font-medium text-black shadow-[0_20px_60px_rgba(251,191,36,0.28)] transition hover:scale-[1.02]"
               >
-                Launch app
+                Open internal dashboard
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/receive"
+                href="/login"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/12 bg-white/5 px-6 py-3.5 text-sm font-medium text-white/88 backdrop-blur-xl transition hover:border-white/20 hover:bg-white/8"
               >
-                Generate stealth address
+                Sign in
               </Link>
             </div>
 

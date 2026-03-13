@@ -5,7 +5,7 @@ const footerLinks = [
   { href: '#features', label: 'Features' },
   { href: '#flow', label: 'Flow' },
   { href: '#proof', label: 'Security' },
-  { href: '/dashboard', label: 'Launch app' },
+  { href: '/login', label: 'Sign in' },
 ];
 
 export function LandingFooter(): React.JSX.Element {
@@ -13,7 +13,7 @@ export function LandingFooter(): React.JSX.Element {
     <footer className="relative border-t border-white/10 bg-black/20">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-[1.4fr,1fr] md:px-8">
         <div className="space-y-5">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/15 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.22em] text-cyan-100/75">
+          <div className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.22em] text-fuchsia-100/85">
             <Shield className="h-3.5 w-3.5" />
             Privacy infrastructure for Bitcoin
           </div>
@@ -34,7 +34,7 @@ export function LandingFooter(): React.JSX.Element {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block text-white/68 transition hover:text-cyan-200"
+                  className="block text-white/68 transition hover:text-fuchsia-200"
                 >
                   {link.label}
                 </a>
@@ -45,14 +45,14 @@ export function LandingFooter(): React.JSX.Element {
             <div className="text-xs uppercase tracking-[0.22em] text-white/35">Stack</div>
             <div className="space-y-3 text-white/68">
               <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-violet-300" /> Next.js + shadcn
+                <Sparkles className="h-4 w-4 text-fuchsia-300" /> Next.js + shadcn
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="h-4 w-4 text-emerald-300" /> Supabase + RLS
+                <Shield className="h-4 w-4 text-amber-300" /> Supabase + RLS
               </div>
               <Link
                 href="https://github.com/YogeshK34/Stealth-Address-Payment-System"
-                className="flex items-center gap-2 transition hover:text-cyan-200"
+                className="flex items-center gap-2 transition hover:text-fuchsia-200"
               >
                 <Github className="h-4 w-4" /> GitHub repository
               </Link>
