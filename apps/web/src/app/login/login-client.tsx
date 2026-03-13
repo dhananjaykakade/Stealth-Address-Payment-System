@@ -78,7 +78,7 @@ export default function LoginClientPage(): React.JSX.Element {
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-white/45">Secure access</p>
-            <h1 className="text-2xl font-medium tracking-tight">Sign in to Stealth Pay</h1>
+            <h1 className="text-2xl font-light tracking-tight">Sign in to Stealth Pay</h1>
           </div>
         </div>
 

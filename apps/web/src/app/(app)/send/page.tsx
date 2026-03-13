@@ -13,7 +13,7 @@ export default function SendPage(): React.JSX.Element {
         {/* TODO: wire up useSendPayment mutation */}
         <form className="app-shell-panel space-y-4 rounded-[1.75rem] p-6">
           <div className="space-y-1">
-            <label className="text-sm font-medium text-white/80" htmlFor="viewKey">
+            <label className="text-sm font-light text-white/80" htmlFor="viewKey">
               Receiver Public View Key (A)
             </label>
             <input
@@ -25,7 +25,7 @@ export default function SendPage(): React.JSX.Element {
           </div>
 
           <div className="space-y-1">
-            <label className="text-sm font-medium text-white/80" htmlFor="spendKey">
+            <label className="text-sm font-light text-white/80" htmlFor="spendKey">
               Receiver Public Spend Key (B)
             </label>
             <input
@@ -37,7 +37,7 @@ export default function SendPage(): React.JSX.Element {
           </div>
 
           <div className="space-y-1">
-            <label className="text-sm font-medium text-white/80" htmlFor="amount">
+            <label className="text-sm font-light text-white/80" htmlFor="amount">
               Amount (satoshis)
             </label>
             <input
@@ -56,7 +56,7 @@ export default function SendPage(): React.JSX.Element {
       </div>
 
       <div className="app-shell-panel rounded-[1.75rem] p-6">
-        <div className="text-sm font-medium uppercase tracking-[0.22em] text-violet-100/70">
+        <div className="text-sm font-light uppercase tracking-[0.22em] text-violet-100/70">
           What happens next
         </div>
         <div className="mt-5 space-y-4">

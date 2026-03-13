@@ -3,8 +3,9 @@ import { Github, Shield, Sparkles } from 'lucide-react';
 
 const footerLinks = [
   { href: '#features', label: 'Features' },
+  { href: '#pricing', label: 'Pricing' },
   { href: '#flow', label: 'Flow' },
-  { href: '#proof', label: 'Security' },
+  { href: '#insights', label: 'Blog' },
   { href: '/login', label: 'Sign in' },
 ];
 
@@ -18,11 +19,10 @@ export function LandingFooter(): React.JSX.Element {
             Privacy infrastructure for Bitcoin
           </div>
           <div className="max-w-xl text-2xl font-light tracking-tight text-white md:text-3xl">
-            Institutional-grade wallet flows with stealth-address privacy layered on top.
+            Premium privacy rails for modern Bitcoin payment products.
           </div>
           <p className="max-w-2xl text-sm leading-7 text-white/55">
-            Built for fast demoability, clean architecture, and a product feel that matches the
-            cryptographic sophistication underneath.
+            Clean architecture, refined UX, and scanner-backed stealth flows.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export function LandingFooter(): React.JSX.Element {
         </div>
       </div>
       <div className="border-t border-white/8 px-6 py-5 text-center text-xs text-white/35 md:px-8">
-        © 2026 Stealth Pay · Modern stealth-address UX for private Bitcoin payments.
+        © 2026 Stealth Pay · Hyper-modern stealth payment UX.
       </div>
     </footer>
   );

@@ -4,7 +4,7 @@ export default function DashboardPage(): React.JSX.Element {
       <section className="app-shell-panel overflow-hidden rounded-[2rem] p-6 md:p-8">
         <div className="grid gap-8 lg:grid-cols-[1.2fr,0.8fr]">
           <div className="space-y-5">
-            <div className="inline-flex rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.24em] text-fuchsia-100/85">
+            <div className="inline-flex rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-3 py-1 text-xs font-light uppercase tracking-[0.24em] text-fuchsia-100/85">
               Wallet command center
             </div>
             <div>
@@ -43,20 +43,20 @@ export default function DashboardPage(): React.JSX.Element {
         ].map((s) => (
           <div key={s.label} className="metric-tile">
             <p className="text-sm text-white/48">{s.label}</p>
-            <p className="mt-2 text-3xl font-medium tracking-tight text-white">{s.value}</p>
+            <p className="mt-2 text-3xl font-light tracking-tight text-white">{s.value}</p>
           </div>
         ))}
       </div>
 
       <section className="grid gap-4 lg:grid-cols-[1.2fr,0.8fr]">
         <div className="app-shell-panel rounded-[1.75rem] p-6">
-          <h2 className="text-lg font-medium text-white">Recent Transactions</h2>
+          <h2 className="text-lg font-light text-white">Recent Transactions</h2>
           <div className="mt-4 rounded-[1.25rem] border border-white/10 divide-y divide-white/10">
             <p className="p-6 text-center text-sm text-white/45">No transactions yet.</p>
           </div>
         </div>
         <div className="app-shell-panel rounded-[1.75rem] p-6">
-          <h2 className="text-lg font-medium text-white">What to do next</h2>
+          <h2 className="text-lg font-light text-white">What to do next</h2>
           <div className="mt-4 space-y-3 text-sm text-white/60">
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
               1. Generate your stealth receive card.

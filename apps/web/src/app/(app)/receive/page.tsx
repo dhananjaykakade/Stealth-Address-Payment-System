@@ -30,7 +30,7 @@ export default function ReceivePage(): React.JSX.Element {
         {/* TODO: wire up useStealthAddress hook */}
         <div className="app-shell-panel space-y-5 rounded-[1.75rem] p-6">
           <div>
-            <label className="text-xs font-medium text-white/40 uppercase tracking-wide">
+            <label className="text-xs font-light text-white/40 uppercase tracking-wide">
               Public View Key (A)
             </label>
             <p className="mt-2 break-all rounded-2xl border border-white/10 bg-black/20 p-4 font-mono text-sm text-fuchsia-100">
@@ -38,7 +38,7 @@ export default function ReceivePage(): React.JSX.Element {
             </p>
           </div>
           <div>
-            <label className="text-xs font-medium text-white/40 uppercase tracking-wide">
+            <label className="text-xs font-light text-white/40 uppercase tracking-wide">
               Public Spend Key (B)
             </label>
             <p className="mt-2 break-all rounded-2xl border border-white/10 bg-black/20 p-4 font-mono text-sm text-amber-100">
@@ -53,7 +53,7 @@ export default function ReceivePage(): React.JSX.Element {
       </div>
 
       <div className="app-shell-panel rounded-[1.75rem] p-6">
-        <div className="text-sm font-medium uppercase tracking-[0.22em] text-fuchsia-100/80">
+        <div className="text-sm font-light uppercase tracking-[0.22em] text-fuchsia-100/80">
           Shareable stealth card
         </div>
         <div className="mt-5 flex flex-col items-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 text-center">

@@ -11,6 +11,7 @@
     "clean": "rm -rf .next out"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.12",
     "@stealth/bitgo-client": "workspace:*",
     "@stealth/crypto": "workspace:*",
     "@stealth/db": "workspace:*",

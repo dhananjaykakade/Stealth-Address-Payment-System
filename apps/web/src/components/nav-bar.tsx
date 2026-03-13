@@ -50,7 +50,7 @@ export function NavBar(): React.JSX.Element {
             <Shield className="h-4 w-4" />
           </div>
           <div>
-            <div className="text-sm font-medium uppercase tracking-[0.22em] text-fuchsia-100/85">
+            <div className="text-sm font-light uppercase tracking-[0.22em] text-fuchsia-100/85">
               Stealth Pay
             </div>
             <div className="text-xs text-white/45">Internal operations</div>
@@ -65,7 +65,7 @@ export function NavBar(): React.JSX.Element {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors',
+                    'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-light transition-colors',
                     pathname === item.href
                       ? 'bg-white/12 text-white shadow-[0_8px_24px_rgba(15,23,42,0.26)]'
                       : 'text-white/58 hover:bg-white/7 hover:text-white'
@@ -80,14 +80,14 @@ export function NavBar(): React.JSX.Element {
         </nav>
 
         <div className="flex items-center gap-2">
-          <div className="hidden items-center gap-2 rounded-full border border-emerald-400/15 bg-emerald-400/10 px-3 py-2 text-xs font-medium text-emerald-200 md:flex">
+          <div className="hidden items-center gap-2 rounded-full border border-emerald-400/15 bg-emerald-400/10 px-3 py-2 text-xs font-light text-emerald-200 md:flex">
             <Activity className="h-3.5 w-3.5" />
             Scanner online
           </div>
           <button
             type="button"
             onClick={onSignOut}
-            className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-3 py-2 text-xs font-medium text-white/75 transition hover:bg-white/10 hover:text-white"
+            className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-3 py-2 text-xs font-light text-white/75 transition hover:bg-white/10 hover:text-white"
           >
             <LogOut className="h-3.5 w-3.5" />
             Sign out

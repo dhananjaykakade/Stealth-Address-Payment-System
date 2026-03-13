@@ -108,7 +108,7 @@
   }
 
   .app-section-title {
-    @apply text-3xl font-medium tracking-[-0.03em] text-white md:text-4xl;
+    @apply text-3xl font-light tracking-[-0.03em] text-white md:text-4xl;
   }
 
   .metric-tile {
@@ -120,7 +120,7 @@
   }
 
   .button-premium {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-fuchsia-400 via-rose-300 to-amber-200 px-5 py-3 text-sm font-medium text-black shadow-[0_16px_44px_rgba(251,191,36,0.2)] transition hover:scale-[1.02];
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-fuchsia-400 via-rose-300 to-amber-200 px-5 py-3 text-sm font-light text-black shadow-[0_16px_44px_rgba(251,191,36,0.2)] transition hover:scale-[1.02];
   }
 
   .animate-float-slow {
@@ -156,4 +156,51 @@
     opacity: 1;
     transform: scale(1.02);
   }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 240ms ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 220ms ease-out;
+}
+
+.accordion-content[data-state='open'] {
+  animation: accordion-down 240ms ease-out;
+}
+
+.accordion-content[data-state='closed'] {
+  animation: accordion-up 220ms ease-out;
 }
